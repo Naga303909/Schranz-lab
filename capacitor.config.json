@@ -1,0 +1,6 @@
+{
+  "appId": "com.naga303909.schranzpatchlab",
+  "appName": "Schranz Patch Lab",
+  "webDir": "www",
+  "server": {"androidScheme": "https"}
+}
