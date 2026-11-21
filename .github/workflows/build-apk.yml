@@ -27,7 +27,7 @@ jobs:
       - name: Prepare web assets
         run: |
           mkdir -p www
-          cp index.html manifest.webmanifest icon.svg sw.js www/
+          cp index.html manifest.webmanifest icon.svg sw.js black-sequencer.js www/
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
