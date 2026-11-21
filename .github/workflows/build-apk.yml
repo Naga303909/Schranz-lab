@@ -24,11 +24,13 @@ jobs:
           distribution: temurin
           java-version: '21'
 
+      
       - name: Prepare web assets
         run: |
           mkdir -p www
-          
-<script src="lxr-behringer-v32.js"></script>
+          cp index.html manifest.webmanifest icon.svg sw.js black-sequencer.js lxr-behringer-v32.js www/
+
+
 
 
       - name: Install dependencies
