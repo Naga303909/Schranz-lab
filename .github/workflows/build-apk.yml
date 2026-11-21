@@ -27,7 +27,9 @@ jobs:
       - name: Prepare web assets
         run: |
           mkdir -p www
-          cp index.html manifest.webmanifest icon.svg sw.js black-sequencer.js www/
+          
+<script src="lxr-behringer-v32.js"></script>
+
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
