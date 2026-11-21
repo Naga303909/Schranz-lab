@@ -43,6 +43,32 @@ $('play').onclick=play;$('stop').onclick=stop;$('tempo').onchange=()=>{if(ctx){c
 </script>
 <script src="black-sequencer.js"></script>
 
-<script src="lxr-behringer-v32.js"></script>
+
+<script>
+window.addEventListener('load', () => {
+  const status = document.createElement('section');
+  status.id = 'lxr-diagnostic';
+  status.innerHTML = '<h2>LXR v3.2 diagnose</h2><p id="lxr-result">LXR wordt gecontroleerd...</p>';
+  document.querySelector('main').appendChild(status);
+
+  const script = document.createElement('script');
+  script.src = 'lxr-behringer-v32.js?v=3202';
+
+  script.onload = () => {
+    document.getElementById('lxr-result').textContent =
+      document.getElementById('v32')
+        ? 'LXR v3.2 is succesvol geladen.'
+        : 'LXR-bestand geladen, maar module niet gestart.';
+  };
+
+  script.onerror = () => {
+    document.getElementById('lxr-result').textContent =
+      'FOUT: LXR JavaScript-bestand kon niet worden geladen.';
+  };
+
+  document.body.appendChild(script);
+});
+</script>
+  
 </body>
 </html>
