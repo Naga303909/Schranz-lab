@@ -42,5 +42,7 @@ function stop(){if(timer){clearInterval(timer);timer=null}if(scopeFrame){cancelA
 $('play').onclick=play;$('stop').onclick=stop;$('tempo').onchange=()=>{if(ctx){clearInterval(timer);timer=setInterval(trigger,60000/(+$('tempo').value))}};document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});load('kick');if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
 </script>
 <script src="black-sequencer.js"></script>
+
+<script src="lxr-behringer-v32.js"></script>
 </body>
 </html>
